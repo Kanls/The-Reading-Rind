@@ -2,37 +2,35 @@
 layout: default
 ---
 
-<main class="page-content" aria-label="Content">
-  <div class="wrapper">
+<div class="wrapper">
 
-    <section class="home-intro">
-      <p class="home-tagline">{{ site.description }}</p>
-    </section>
+  <section class="home-intro">
+    <p class="home-tagline">{{ site.description }}</p>
+  </section>
 
-    <section class="featured-posts">
-      {% assign recent_posts = site.posts | slice: 0, 2 %}
-      {% for post in recent_posts %}
-        <article class="featured-card">
-          <a href="{{ post.url | relative_url }}">
-            <img src="{{ post.featured_image }}" alt="{{ post.title }}" class="featured-image">
-          </a>
+  <section class="featured-posts">
+    {% assign recent_posts = site.posts | slice: 0, 2 %}
+    {% for post in recent_posts %}
+      <article class="featured-card">
+        <a href="{{ post.url | relative_url }}">
+          <img src="{{ post.featured_image }}" alt="{{ post.title }}" class="featured-image">
+        </a>
 
-          <div class="featured-content">
-            <h2><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h2>
+        <div class="featured-content">
+          <h2><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h2>
 
-            <p class="featured-meta">
-              By {{ post.author }} — {{ post.date | date: "%b %-d, %Y" }}
-            </p>
+          <p class="featured-meta">
+            By {{ post.author }} — {{ post.date | date: "%b %-d, %Y" }}
+          </p>
 
-            <p class="featured-excerpt">
-              {{ post.excerpt | strip_html | truncate: 180 }}
-            </p>
+          <p class="featured-excerpt">
+            {{ post.excerpt | strip_html | truncate: 180 }}
+          </p>
 
-            <a href="{{ post.url | relative_url }}" class="read-more">Read more →</a>
-          </div>
-        </article>
-      {% endfor %}
-    </section>
+          <a href="{{ post.url | relative_url }}" class="read-more">Read more →</a>
+        </div>
+      </article>
+    {% endfor %}
+  </section>
 
-  </div>
-</main>
+</div>
