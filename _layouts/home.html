@@ -5,7 +5,10 @@ layout: default
 <main class="page-content" aria-label="Content">
   <div class="wrapper">
 
-    <!-- Featured posts -->
+    <section class="home-intro">
+      <p class="home-tagline">{{ site.description }}</p>
+    </section>
+
     <section class="featured-posts">
       {% assign recent_posts = site.posts | slice: 0, 2 %}
       {% for post in recent_posts %}
@@ -15,9 +18,7 @@ layout: default
           </a>
 
           <div class="featured-content">
-            <h2>
-              <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
-            </h2>
+            <h2><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h2>
 
             <p class="featured-meta">
               By {{ post.author }} — {{ post.date | date: "%b %-d, %Y" }}

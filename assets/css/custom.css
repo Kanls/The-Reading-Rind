@@ -10,6 +10,13 @@ html {
   background: #fafafa;
 }
 
+.home-tagline {
+  font-size: 1.1rem;
+  color: #555;
+  margin-bottom: 2rem;
+}
+
+
 h1, h2, h3, h4 {
   font-weight: 600;
   line-height: 1.3;
@@ -31,6 +38,37 @@ a {
 a:hover {
   text-decoration: underline;
 }
+
+/* Header */
+.site-header {
+  background: #ffffff;
+  border-bottom: 1px solid #e5e5e5;
+  padding: 1rem 0;
+}
+
+.header-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.site-title {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #111;
+}
+
+.site-nav a {
+  margin-left: 1.2rem;
+  color: #555;
+  font-size: 0.95rem;
+}
+
+.site-nav a:hover {
+  color: #000;
+}
+
+
 
 /* ------------------------------
    Layout + Wrapper
