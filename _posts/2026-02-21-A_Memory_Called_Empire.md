@@ -2,5 +2,5 @@
 layout: post
 title: "A Memory Called Empire"
 author: "0I"
-featured_image: "/assets/images/memoryempire.jpg"
+featured_image: "/_assets/_images/memoryempire.jpg"
 ---
