@@ -1,0 +1,49 @@
+.featured-posts {
+  display: flex;
+  gap: 2rem;
+  margin: 3rem 0;
+  flex-wrap: wrap;
+}
+
+.featured-card {
+  flex: 1 1 calc(50% - 2rem);
+  display: flex;
+  flex-direction: column;
+  background: #fff;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+}
+
+.featured-image {
+  width: 100%;
+  height: 260px;
+  object-fit: cover;
+}
+
+.featured-content {
+  padding: 1.2rem 1.4rem;
+}
+
+.featured-meta {
+  color: #666;
+  font-size: 0.9rem;
+  margin-top: -0.5rem;
+}
+
+.featured-excerpt {
+  margin: 1rem 0;
+  color: #333;
+}
+
+.read-more {
+  font-weight: bold;
+  text-decoration: none;
+  color: #007acc;
+}
+
+@media (max-width: 800px) {
+  .featured-card {
+    flex: 1 1 100%;
+  }
+}

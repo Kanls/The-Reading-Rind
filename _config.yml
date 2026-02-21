@@ -1,2 +1,7 @@
 title: "The Reading Rind"
 theme: minima
+defaults:
+  - scope:
+      path: ""
+    values:
+      layout: home
