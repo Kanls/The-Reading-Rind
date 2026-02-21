@@ -1,7 +1,12 @@
 title: "The Reading Rind"
 theme: minima
-defaults:
-  - scope:
-      path: ""
-    values:
-      layout: home
+sass:
+  style: compressed
+
+# If your theme supports additional stylesheets:
+# For minima, you can use:
+plugins:
+  - jekyll-seo-tag
+  - jekyll-feed
+  - jekyll-sitemap
+# And in your main layout (optional advanced step) you’d link custom.css
