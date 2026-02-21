@@ -5,16 +5,25 @@ layout: default
 <main class="page-content" aria-label="Content">
   <div class="wrapper">
 
-    <div class="featured-posts">
+    <!-- Intro section -->
+    <section class="home-intro">
+      <h1>{{ site.title }}</h1>
+      <p>{{ site.description }}</p>
+    </section>
+
+    <!-- Featured posts -->
+    <section class="featured-posts">
       {% assign recent_posts = site.posts | slice: 0, 2 %}
       {% for post in recent_posts %}
-        <div class="featured-card">
+        <article class="featured-card">
           <a href="{{ post.url | relative_url }}">
             <img src="{{ post.featured_image }}" alt="{{ post.title }}" class="featured-image">
           </a>
 
           <div class="featured-content">
-            <h2><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h2>
+            <h2>
+              <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
+            </h2>
 
             <p class="featured-meta">
               By {{ post.author }} — {{ post.date | date: "%b %-d, %Y" }}
@@ -26,9 +35,9 @@ layout: default
 
             <a href="{{ post.url | relative_url }}" class="read-more">Read more →</a>
           </div>
-        </div>
+        </article>
       {% endfor %}
-    </div>
+    </section>
 
   </div>
 </main>
