@@ -10,6 +10,11 @@ html {
   background: #fafafa;
 }
 
+a, a:visited, a:active {
+  text-decoration: none !important;
+}
+
+
 .wrapper {
   max-width: 820px;
   margin: 0 auto;
