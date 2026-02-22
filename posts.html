@@ -1,17 +1,31 @@
 ---
 layout: default
-title: "Reviews"
+title: "All Reviews"
 ---
 
 <div class="wrapper">
-  <h1>All Posts</h1>
 
-  <ul class="posts-list">
+  <section class="posts-grid">
     {% for post in site.posts %}
-      <li class="posts-list-item">
-        <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
-        <span class="posts-list-date">{{ post.date | date: "%B %-d, %Y" }}</span>
-      </li>
+      <article class="post-card">
+        <a href="{{ post.url | relative_url }}">
+          <img src="{{ post.featured_image }}" alt="{{ post.title }}" class="post-card-image">
+        </a>
+
+        <div class="post-card-content">
+          <h2><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h2>
+
+          <p class="post-card-meta">
+            {{ post.date | date: "%B %-d, %Y" }}
+          </p>
+
+          <p class="post-card-excerpt">
+            {{ post.excerpt | strip_html | truncate: 180 }}
+          </p>
+
+          <a href="{{ post.url | relative_url }}" class="read-more">Read more →</a>
+        </div>
+      </article>
     {% endfor %}
-  </ul>
+  </section>
 </div>
