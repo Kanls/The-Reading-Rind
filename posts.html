@@ -1,0 +1,17 @@
+---
+layout: default
+title: "Reviews"
+---
+
+<div class="wrapper">
+  <h1>All Posts</h1>
+
+  <ul class="posts-list">
+    {% for post in site.posts %}
+      <li class="posts-list-item">
+        <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
+        <span class="posts-list-date">{{ post.date | date: "%B %-d, %Y" }}</span>
+      </li>
+    {% endfor %}
+  </ul>
+</div>
