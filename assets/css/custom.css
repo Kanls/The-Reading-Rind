@@ -157,6 +157,15 @@ a:hover {
   margin: 1.5rem 0;
 }
 
+.post-content a {
+  text-decoration: underline !important;
+}
+
+.post-content a:hover {
+  text-decoration: underline !important;
+  color: #003f88;
+}
+
 
 /* --------------------------------------------------
    Footer
